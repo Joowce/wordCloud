@@ -1,0 +1,4 @@
+{
+  "test_parser.py::test_article_for_keywords": true,
+  "test_parser.py::test_media": true
+}

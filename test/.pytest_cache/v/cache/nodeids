@@ -1,0 +1,6 @@
+[
+  "test_parser.py::test_get_news_url",
+  "test_parser.py::test_parse_url",
+  "test_parser.py::test_write_article_for_keywords",
+  "test_parser.py::test_media"
+]
