@@ -1,0 +1,25 @@
+{
+  "name": "word-cloud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://Joowce@github.com/Joowce/wordCloud.git"
+  },
+  "author": "joowce",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joowce/wordCloud/issues"
+  },
+  "homepage": "https://github.com/Joowce/wordCloud#readme",
+  "devDependencies": {
+    "serverless": "^1.32.0"
+  }
+}

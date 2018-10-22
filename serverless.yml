@@ -1,0 +1,46 @@
+service: word-cloud
+
+custom:
+  s3BucketName: ${file(env/config.json):s3BucketName}
+
+provider:
+  name: aws
+  runtime: python3.6
+  region: ap-northeast-2
+  environment:
+    bucketName: ${self:custom.s3BucketName}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:PutObject'
+      Resource:
+        Fn::Join:
+          - ''
+          - -'arn:aws:s3:::'
+            - ${self:custom.s3BucketName}
+            - '/*'
+
+package:
+  exclude:
+    - node_modules/**
+    - .idea/**
+    - .git/**
+    - env/**
+    - dist/**
+    - result/**
+    - test/**
+    - mkWordcloud.py
+    - package.json
+    - package-lock.json
+
+functions:
+  make:
+    handler: handler.handler
+
+resources:
+  Resources:
+    s3OutputBucket:
+      Type: AWS::S3::Bucket
+      Properties:
+        BucketName: ${self:custom.s3BucketName}
+
