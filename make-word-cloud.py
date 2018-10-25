@@ -7,7 +7,7 @@ from article_parser.parser import write_article_from_media
 
 def main(argv):
     if len(argv) != 4:
-        print('python mkWordcloud.py "keyword" "noun_count" "output_file_name"')
+        print('python make-word-cloud.py "keyword" "noun_count" "output_file_name"')
     keyword = argv[1]
     noun_count = int(argv[2])
     output_file_name = argv[3]

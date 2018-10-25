@@ -2,11 +2,13 @@ service: word-cloud
 
 custom:
   s3BucketName: ${file(env/config.json):s3BucketName}
+  profile: ${file(env/config.json):profile}
 
 provider:
   name: aws
   runtime: python3.6
   region: ap-northeast-2
+  profile: ${self:custom.profile}
   environment:
     bucketName: ${self:custom.s3BucketName}
   iamRoleStatements:
@@ -16,7 +18,7 @@ provider:
       Resource:
         Fn::Join:
           - ''
-          - -'arn:aws:s3:::'
+          - - 'arn:aws:s3:::'
             - ${self:custom.s3BucketName}
             - '/*'
 
@@ -29,7 +31,7 @@ package:
     - dist/**
     - result/**
     - test/**
-    - mkWordcloud.py
+    - make-word-cloud.py
     - package.json
     - package-lock.json
 
