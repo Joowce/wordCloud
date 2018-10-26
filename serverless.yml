@@ -1,6 +1,12 @@
 service: word-cloud
 
+plugins:
+  - serverless-python-requirements
+
 custom:
+  pythonRequirements:
+    dockerizePip: true
+    slim: true
   s3BucketName: ${file(env/config.json):s3BucketName}
   profile: ${file(env/config.json):profile}
 
@@ -34,6 +40,7 @@ package:
     - make-word-cloud.py
     - package.json
     - package-lock.json
+    - venv/**
 
 functions:
   make:
