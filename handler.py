@@ -2,8 +2,8 @@ import json
 import datetime
 import boto3
 import os
-from makeWordcloud.wordcloud import make_image
-from makeWordcloud.morpheme import get_tags
+from make_word_cloud.wordcloud import make_image
+from make_word_cloud.morpheme import get_tags
 from article_parser.parser import write_article_from_media
 
 

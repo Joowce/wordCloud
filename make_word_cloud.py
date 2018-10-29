@@ -1,13 +1,13 @@
 import sys
 import os
-from makeWordcloud.wordcloud import make_image
-from makeWordcloud.morpheme import get_tags
+from make_word_cloud.wordcloud import make_image
+from make_word_cloud.morpheme import get_tags
 from article_parser.parser import write_article_from_media
 
 
 def main(argv):
     if len(argv) != 4:
-        print('python make-word-cloud.py "keyword" "noun_count" "output_file_name"')
+        print('python make_word_cloud.py "keyword" "noun_count" "output_file_name"')
     keyword = argv[1]
     noun_count = int(argv[2])
     output_file_name = argv[3]

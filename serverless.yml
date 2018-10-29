@@ -37,7 +37,7 @@ package:
     - dist/**
     - result/**
     - test/**
-    - make-word-cloud.py
+    - make_word_cloud.py
     - package.json
     - package-lock.json
     - venv/**
