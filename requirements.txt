@@ -32,7 +32,7 @@ jmespath==0.9.3
 JPype1==0.6.3
 konlpy==0.5.1
 lxml==4.2.1
-Mako==1.0.7
+Mako==1.2.2
 MarkupSafe==1.0
 marshmallow==3.0.0b5
 marshmallow-sqlalchemy==0.13.2
